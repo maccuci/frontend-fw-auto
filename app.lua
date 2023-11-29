@@ -1,9 +1,9 @@
+require('config.init')
 require("switch")
 local sleep = require("sleep")
 
 -- Next setup
 local setup = require("config.next.setup")
-require('config.init')
 
 local function start()
     local support_frameworks = { "next", "vite", "remix" }
