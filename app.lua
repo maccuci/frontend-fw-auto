@@ -1,9 +1,12 @@
+-- General config
 require('config.init')
 require("switch")
 
+-- Local modules
 local sleep = require("sleep")
-local setup = require("config.setup")
+local setup = require("logic.setup")
 
+-- Start script
 local function start()
     local support_frameworks = { "next", "vite", "remix" }
 
@@ -18,6 +21,7 @@ local function start()
 
     print(PREFIX .. "You choose: " .. (framework or "Invalid") .. ", start to generate project...")
     sleep.invoke(3)
+    
     setup.generate(PREFIX, framework)
 end
 
