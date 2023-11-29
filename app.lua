@@ -1,9 +1,8 @@
 require('config.init')
 require("switch")
-local sleep = require("sleep")
 
--- Next setup
-local setup = require("config.next.setup")
+local sleep = require("sleep")
+local setup = require("config.setup")
 
 local function start()
     local support_frameworks = { "next", "vite", "remix" }
@@ -19,19 +18,7 @@ local function start()
 
     print(PREFIX .. "You choose: " .. (framework or "Invalid") .. ", start to generate project...")
     sleep.invoke(3)
-
-    Switch(framework)
-        :case("next", function()
-            setup.invoke(PREFIX)
-        end)
-        :case("vite", function()
-            print("Vite logic")
-        end)
-        :case("remix", function()
-            print("Remix logic")
-        end)
-        :default(function() print(PREFIX .. "Invalid framework.") end)
-        :invoke()
+    setup.generate(PREFIX, framework)
 end
 
 start()

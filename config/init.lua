@@ -9,10 +9,10 @@ next_opts = {
     '--import-alias @/*'
 }
 
-remix_opts = {
-
-}
-
 vite_opts = {
-    
+    '--template react-ts'
 }
+
+remix_opts = {
+}
+

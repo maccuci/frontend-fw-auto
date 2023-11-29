@@ -1,5 +1,3 @@
-# {project_name}
-
-Lua scripting of automation for use frontend frameworks.
+Lua scripting automation for use frontend frameworks.
 
 Need Lua binaries.
