@@ -20,8 +20,7 @@ local function start()
     local framework = support_frameworks[index]
 
     print(PREFIX .. "You choose: " .. (framework or "Invalid") .. ", start to generate project...")
-    sleep.invoke(3)
-    
+    sleep.invoke(3)  
     setup.generate(PREFIX, framework)
 end
 

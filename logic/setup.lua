@@ -1,8 +1,8 @@
 require('switch')
 
-local sleep = require('sleep')
 local next = require('logic.next')
 local vite = require('logic.vite')
+local remix = require('logic.remix')
 
 local S = {}
 
@@ -18,7 +18,7 @@ function S.generate(PREFIX, framework)
             vite.invoke(PREFIX)
         end)
         :case("remix", function()
-            print("Remix logic")
+            remix.invoke(PREFIX)
         end)
         :default(function() print(PREFIX .. "Invalid framework.") end)
         :invoke()

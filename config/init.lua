@@ -14,5 +14,6 @@ vite_opts = {
 }
 
 remix_opts = {
+    ''
 }
 
